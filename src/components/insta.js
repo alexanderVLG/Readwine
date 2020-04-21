@@ -51,7 +51,7 @@ const Insta = () => {
                     </a>
                 ))}
             </div>
-            <a href={'https://instagram.com/${username}'}>
+            <a href={`https://instagram.com/${username}`} target={`_blank`}>
                 See more on Instagram &rarr;
             </a>
         </>

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Blog about wine',
-    description: 'A site i made for telling you story about famous wine',
+    title: 'Readwine',
+    description: 'Этот сайт ',
   },
 
   plugins: [
