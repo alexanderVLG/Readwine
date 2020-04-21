@@ -70,7 +70,19 @@ const Layout = ({ children }) => {
         css={css`
         margin: 2rem auto 4rem;
         max-width: 90vw;
-        width: 550px;
+        width: 940px;
+        @media (max-width: 1040px) {
+          width: 740px;
+        }
+        @media (max-width: 820px) {
+          width: 550px;
+        }
+        @media (max-width: 610px) {
+          width: 400px;
+        }
+        @media (max-width: 420px) {
+          width: 300px;
+        }
       `}
       >
         {children}

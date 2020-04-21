@@ -9,7 +9,13 @@ const Insta = () => {
 
     return (
         <>
-            <h2>Instagram Posts from @{username}</h2>
+            <div
+                css={css`
+                    font-size: 1.5rem;
+                    color: #000;
+                    font-weight: 500;
+                `}
+            >Follow me in instagram @{username}</div>
             <div
                 css={css`
                     display: flex;
@@ -23,16 +29,16 @@ const Insta = () => {
                         key={photo.id}
                         href={`https://instagram.com/p/${photo.id}/`}
                         css={css`
-                            box-shadow: 0;
+                            
                             display: block;
-                            margin: 0.5rem;
+                            margin: 0.2rem;
                             max-width: calc(33% - 1rem);
                             width: 120px;
                             transition: 200ms box-shadow linear;
 
                             :focus,
                             :hover {
-                                box-shadow: 0 2px 14px #22222244;
+                                box-shadow: 0 0 14px #22222244;
                                 z-index: 10;
                             }
                         `}
@@ -42,7 +48,7 @@ const Insta = () => {
                             alt={photo.caption}
                             css={css`
                                 width: 100%;
-
+                                
                                 * {
                                     margin-top: 0;
                                 }
@@ -52,7 +58,7 @@ const Insta = () => {
                 ))}
             </div>
             <a href={`https://instagram.com/${username}`} target={`_blank`}>
-                See more on Instagram &rarr;
+                Переходи по ссылке &rarr;
             </a>
         </>
     );

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { Link } from 'gatsby';
+import Logo from '../../images/Logo.png';
 
 const NavLink = styled(Link)`
   color: #222;
@@ -9,7 +10,6 @@ const NavLink = styled(Link)`
   font-weight: ${props => props.fontWeight || 'normal'};
   line-height: 1;
   margin: 0 0.5rem 0 0;
-  padding: 0.25rem;
   text-decoration: none;
 
   &.current-page {
@@ -24,15 +24,31 @@ const NavLink = styled(Link)`
 const Header = () => (
   <header
     css={css`
-      background: #eee;
+      background: #e5e5e5;
       border-bottom: 1px solid #ddd;
       display: flex;
       justify-content: space-between;
-      padding: 0.5rem calc((100vw - 550px - 0.5rem) / 2);
+      padding: 0.5rem calc((100vw - 945px) / 2) 0;
+      @media (max-width: 1040px) {
+        padding: 0.5rem calc((100vw - 740px) / 2) 0;
+      }
+      @media (max-width: 820px) {
+        padding: 0.5rem calc((100vw - 550px) / 2) 0;
+      }
+      @media (max-width: 610px) {
+        padding: 0.5rem calc((100vw - 400px) / 2) 0;
+      }
+      @media (max-width: 420px) {
+        padding: 0.5rem calc((100vw - 300px) / 2) 0;
+      }
     `}
   >
     <NavLink to="/" fontWeight="bold">
-      FEM Workshop
+      <img src={Logo} alt="Logo"
+        css={css`
+        width: 50px;
+        height: 30px;
+      `}></img>
     </NavLink>
     <nav
       css={css`
@@ -40,13 +56,16 @@ const Header = () => (
       `}
     >
       <NavLink to="/" activeClassName="current-page">
-        Home
+        Главная
       </NavLink>
-      <NavLink to="/about/" activeClassName="current-page">
-        About
+      <NavLink to="/wine/" activeClassName="current-page">
+        Вино
+      </NavLink>
+      <NavLink to="/overview/" activeClassName="current-page">
+        Обзоры
       </NavLink>
     </nav>
-  </header>
+  </header >
 );
 
 export default Header;

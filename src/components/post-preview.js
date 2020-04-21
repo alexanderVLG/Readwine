@@ -16,19 +16,25 @@ const PostPreview = ({ post }) => (
             :first-of-type {
                 margin-top: 1rem;
             }
+
+            @media (max-width: 610px) {
+                flex-direction: column;
+            }
         `}
     >
         <Link to={post.slug}
             css={css`
                 margin: 1rem 1rem 0 0;
-                width: 100px;
+                min-width: 150px;
             `}
         >
             <Image
                 fluid={post.image.sharp.fluid}
                 css={css`
+                    border-radius: 10px;
                     * {
                         margin-top: 0;
+                        
                     }
                 `}
                 alt={post.title}
@@ -40,7 +46,7 @@ const PostPreview = ({ post }) => (
                 <Link to={post.slug}>{post.title}</Link>
             </h3>
             <p>{post.excerpt}</p>
-            <ReadLink to={post.slug}>read this post &rarr;</ReadLink>
+            <ReadLink to={post.slug}>Читать статью &rarr;</ReadLink>
         </div>
     </article >
 );
