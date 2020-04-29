@@ -64,6 +64,7 @@ const Layout = ({ children }) => {
         <html lang="ru" />
         <title>{title}</title>
         <meta name="description" content={description} />
+        <meta name='freelancehunt' content='07eb0cda6c0ce52' />
       </Helmet>
       <Header />
       <main
