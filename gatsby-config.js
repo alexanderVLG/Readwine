@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Readwine',
-    description: 'Этот сайт ',
+    title: 'Блог о многообразии вина',
+    description: 'Из этого блога вы узнаете о многообразии вина. Познакомитесь с винами России, Грузии, Армении, Франции, Италии, Испании, Нового Света. Познакомитесь с гастрономией.',
   },
 
   plugins: [
@@ -16,7 +16,7 @@ module.exports = {
         defaultLayouts: {
           default: require.resolve('./src/components/layout.js'),
         },
-        gatsbyRemarkPlugins: [{ resolve: 'gatsby-remark-images' }]
+        gatsbyRemarkPlugins: [{ resolve: 'gatsby-remark-images' }],
       },
     },
     {
@@ -36,8 +36,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-instagram',
       options: {
-        username: 'alexander_kovalev_'
-      }
+        username: 'alexander_kovalev_',
+      },
     },
     {
       resolve: 'gatsby-plugin-webpack-bundle-analyzer',
@@ -51,5 +51,3 @@ module.exports = {
     },
   ],
 };
-
-
