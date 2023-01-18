@@ -10,7 +10,7 @@ export default () => {
   return (
     <>
       <Layout>
-        <h2>Блог о вине</h2>
+        <h2>Блог о рыбалке</h2>
         {posts.map(post => (
           <PostPreview key={post.slug} post={post} />
         ))}

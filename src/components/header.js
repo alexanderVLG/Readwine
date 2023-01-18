@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { Link } from 'gatsby';
-import Logo from '../../images/Logo.png';
+import Logo from '../../images/logo.svg';
 
 const NavLink = styled(Link)`
   color: #222;
