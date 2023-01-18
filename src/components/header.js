@@ -47,7 +47,7 @@ const Header = () => (
       <img src={Logo} alt="Logo"
         css={css`
         width: 50px;
-        height: 30px;
+        height: 50px;
       `}></img>
     </NavLink>
     <nav
